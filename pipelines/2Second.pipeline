@@ -1,0 +1,20 @@
+pipeline {
+    agent{label "master"}
+    triggers {
+        pollSCM '@yearly'
+    }
+    options { 
+        timeout(time: 5, unit: 'HOURS')
+        buildDiscarder(logRotator(numToKeepStr: '30', daysToKeepStr: '30'))
+    }
+ 
+    stages {
+        stage("Dummy") {
+            steps{
+                echo "Ahoj przygodo!"
+                echo "Hardcoded 2Second.pipeline line"
+                echo "${JOBNAME}"
+            }   
+        }
+    }
+}
