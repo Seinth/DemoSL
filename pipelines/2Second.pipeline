@@ -13,7 +13,7 @@ pipeline {
             steps{
                 echo "Ahoj przygodo!"
                 echo "Hardcoded 2Second.pipeline line"
-                echo "${JOBNAME}"
+                echo "${JOB_NAME}"
             }   
         }
     }
