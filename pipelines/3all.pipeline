@@ -4,7 +4,6 @@ setProperties()
 
 node("master") {
     def name = checkName()
-    stages{
-        printName(name)
-    }
+    
+    printName(name)
 }
