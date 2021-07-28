@@ -1,3 +1,3 @@
 def call() {
-    return ${JOB_NAME}
+    return env.JOB_NAME
 }
