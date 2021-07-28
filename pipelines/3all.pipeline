@@ -1,0 +1,10 @@
+@Library("DemoSL") _
+
+setProperties()
+
+node("master") {
+    def name = checkName()
+    stages{
+        printName(name)
+    }
+}
